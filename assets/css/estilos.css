@@ -417,17 +417,6 @@ body {
 
 /* Picos   */
 
-
-@media screen and (min-width: 1440px){
-    .principal-picos{
-        grid-template-areas:
-        "titulo-pagina titulo-pagina titulo-pagina" 
-        "picos-mapa picos-mapa picos-favoritos"
-        "secao-picos-mais-visitados secao-picos-mais-visitados secao-picos-mais-visitados"
-
-    }
-}
-
 .picos-mapa{
     width: 100%;
     height: 468px;
@@ -435,20 +424,28 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 15px
+    border-radius: 15px;
 }
 
-@media screen and (min-width: 1440px) {
-    
-
+@media screen and (min-width: 1440px){
     .picos-mapa{
         grid-area: picos-mapa;
     }
-    .secao-picos-mais-visitados{
-        grid-area: secao-picos-mais-visitados;
+    
+    .picos-mais-visitados{
+        grid-area: picos-mais-visitados;
     }
 
     .picos-favoritos{
         grid-area: picos-favoritos;
     }
+
+    .principal-picos{
+        grid-template-areas: 
+            "titulo-pagina titulo-pagina titulo-pagina"
+            "picos-mapa picos-mapa picos-favoritos"
+            "picos-mais-visitados picos-mais-visitados picos-mais-visitados"
+        ;
+    }
+
 }
